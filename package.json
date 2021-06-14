@@ -1,0 +1,22 @@
+{
+  "name": "hell-en",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "https://yevgeniya-alexeyeva.github.io/hell-en",
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html",
+    "predeploy": "npm run build -- --public-url /hell-en/",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "eurocoders-team",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^3.1.0",
+    "parcel-bundler": "^1.12.4",
+    "posthtml-include": "^1.4.3",
+    "sass": "^1.26.9"
+  }
+}

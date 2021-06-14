@@ -1,0 +1,101 @@
+.guarant {
+  
+  @media screen and (min-width: $bp-mobile) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+    @media screen and (min-width: $bp-mobile) and (max-width: 767px) {
+    .container {
+      background-color: $background-middle;
+    }
+  }
+  @media screen and (min-width: $bp-desktop) {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+  &__remark {
+    color: $color-accent;
+  }
+  &__list {
+    background-color: #f1f1f1;
+    margin: 0px;
+    @media screen and (min-width: $bp-mobile) {
+      padding: 30px 20px;
+    }
+    @media screen and (min-width: $bp-tablet) {
+      padding: 30px 50px 30px 79px;
+    }
+    @media screen and (min-width: $bp-desktop) {
+      padding: 50px 112px 45px 112px;
+    }
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    margin-bottom: 23px;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 20px;
+    }
+  }
+  &__item::before {
+    display: block;
+    content: '';
+    background-image: url(../images/svg/bg-sprite.svg#icon-fire);
+    background-repeat: no-repeat;
+    @media screen and (min-width: $bp-mobile) {
+      width: 15px;
+      height: 20px;
+    }
+    @media screen and (min-width: $bp-desktop) {
+      width: 22px;
+      height: 30px;
+    }
+  }
+  &__box-item {
+    width: calc(100% - 25px);
+    display: flex;
+    @media screen and (min-width: $bp-desktop) {
+      width: calc(100% - 35px);
+    }
+  }
+  &__item:not(:last-child)::after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 26px;
+    left: 7.5px;
+    height: calc(100% - 10px);
+    border-left: 1px dashed $color-text-light-2;
+
+    @media screen and (min-width: $bp-desktop) {
+      top: 34px;
+      left: 11px;
+      height: calc(100% - 20px);
+    }
+  }
+  &__title {
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $color-text-dark;
+
+    @media screen and (min-width: $bp-mobile) {
+      @include font(800, 26px, 34px);
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $bp-desktop) {
+      @include font(800, 46px, 60px);
+    }
+  }
+  &__text {
+    margin-left: 20px;
+    color: $color-text-dark-2;
+
+    @media screen and (min-width: $bp-mobile) {
+      @include font(500, 12px, 20px);
+    }
+    @media screen and (min-width: $bp-desktop) {
+      @include font(500, 20px, 28px);
+    }
+  }
+}

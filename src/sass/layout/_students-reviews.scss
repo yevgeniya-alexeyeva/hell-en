@@ -1,0 +1,212 @@
+.students-review{
+    padding: 25px 0 50px 0;
+    text-align: center;
+    min-width: 320px;
+
+    &__section-title{
+        @include font (800, 20px, 26px);
+        letter-spacing: 0.03em;
+        color: $background-dark;
+        margin-bottom: 20px;
+    }
+    &__container{
+        padding: 20px 20px 30px 20px;
+    }
+    &__profile-photo{
+        @extend %block-m;
+        margin-bottom: 20px;
+    }
+    &__social{
+        margin-bottom: 20px;
+    }
+    &__name{
+        @include font (800, 14px, 17px);
+        letter-spacing: 0.08em;
+        color: $color-accent;
+        margin-bottom: 10px;
+    }
+    &__education{
+        @include font (500, 12px, 15px);
+        letter-spacing: 0.08em;
+        color: $color-text-light-2;
+        margin: 0 0 10px 0;
+    }
+    &__review{
+        @include font (500, 12px, 20px);
+        color: $color-text-dark-2;
+    }
+    &__review--extend{
+        color: $color-accent;
+    }
+}
+.slick{
+    &-list {
+        overflow: hidden;
+    }
+    /* Лента слайдов */
+    &-track{
+        display: flex;
+        align-items: flex-start;
+    }
+}
+.slider{
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+    margin-bottom: 20px;
+}
+/* Точки (булиты) */
+.thumbnail .slick-dots{
+    display: flex;
+    margin: 0 auto;
+    max-width: 182px;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.thumbnail .slick-dots li{
+    list-style: none;
+    margin: 0 auto;
+
+    &:not(:last-child){
+        margin-right: 10px;
+    }
+}
+
+.thumbnail .slick-dots button{
+    font-size: 0;
+    width: 54px;
+    height: 54px;
+    border: none;
+    border-radius: 50%;
+
+    &#slick-slide-control00 {
+        background: url(../images/students-reviews/student-1.jpg) 100% no-repeat;
+    }
+    &#slick-slide-control01 {
+        background: url(../images/students-reviews/student-2.jpg) 100% no-repeat;
+    }
+    &#slick-slide-control02 {
+        background: url(../images/students-reviews/student-3.jpg) 100% no-repeat;
+    }
+    &#slick-slide-control03 {
+        background: url(../images/students-reviews/student-4.jpg) 100% no-repeat;
+    }
+    &#slick-slide-control04 {
+        background: url(../images/students-reviews/student-5.jpg) 100% no-repeat;
+    }
+    &#slick-slide-control05 {
+        background: url(../images/students-reviews/student-6.jpg) 100% no-repeat;
+    }
+    &#slick-slide-control06 {
+        background: url(../images/students-reviews/student-7.jpg) 100% no-repeat;
+    }
+}
+/* Активная точка */
+.thumbnail .slick-dots li.slick-active button {
+    border: 1px solid $color-accent;
+}
+
+/* СТРЕЛКИ */
+.students-review .container{
+    position: relative;
+}
+.slider .slick-arrow{
+    position: absolute;
+    bottom: 8px;
+    z-index: 90;
+    font-size: 0;
+    width: 27px;
+    height: 26px;
+    border: none;
+}
+
+/* Стрелка влево */
+.slider .slick-arrow.slick-prev{
+    left: 24px;
+    background: url(../images/students-reviews/Arrow-prev.svg) 100% no-repeat;
+    outline: none;
+}
+/* Стрелка вправо */
+.slider .slick-arrow.slick-next{
+    right: 24px;
+    background: url(../images/students-reviews/Arrow-next.svg) 100% no-repeat;
+    outline: none;
+}
+
+@media screen and (min-width: $bp-tablet){
+    .students-review{
+        &__section-title{
+            @include font (800, 26px, 34px);
+            margin-bottom: 30px;
+        }
+        &__container{
+            display: flex;
+            padding: 40px;
+        }
+        &__img-wrapper{
+            margin-right: 46px;
+        }
+        &__profile-photo{
+            width: 150px;
+            height: 150px;
+        }
+
+        &__description-container{
+            text-align: start;
+        }
+
+        &__name{
+            @include font (800, 20px, 24px);
+            margin-bottom: 20px;
+        }
+        &__education{
+            margin-bottom: 20px;
+        }
+    }
+    .slider{
+        margin-bottom: 30px;
+    }
+    .thumbnail .slick-dots{
+        max-width: 558px;
+    }
+    .slider .slick-arrow{
+        bottom: 50%;
+    }
+}
+
+@media screen and (min-width: $bp-desktop){
+    .students-review{
+        padding: 65px 0 130px 0;
+        width: 100%;
+
+        &__section-title{
+            @include font (800, 46px, 60px);
+            margin-bottom: 50px;
+        }
+        &__container{
+
+            padding: 50px 112px 51px 82px;
+            margin: 0;
+        }
+    
+        &__description-container{
+            min-width:706px;
+        }
+
+        &__name{
+            @include font (800, 30px, 37px);
+            margin-bottom: 10px;
+        }
+        &__education{
+            @include font (500, 14px, 17px);
+        }
+        &__review{
+            @include font (500, 18px, 28px);
+        }
+    }
+    .slider{
+        text-align: center;
+        max-width: 1090px;
+        margin: 0 auto 40px auto;
+    }
+}
+
