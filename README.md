@@ -21,3 +21,5 @@ Layout students project
 - logo
 - header
 - navigation
+
+![Capture](./src/images/Capture.PNG?raw=true 'Site preview')
